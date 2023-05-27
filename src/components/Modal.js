@@ -21,6 +21,7 @@ export default function Modal({isCorrect, turn, solution}) {
           </div>
         )
       }
+      <button onClick={(e)=>window.location.reload(true)} >Again!</button>
     </div>
   )
 }
