@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Wordle from "./components/Wordle";
 import { DarkModeToggle } from "./components/DarkModeToggle";
+import Footer from "./components/Footer";
 
 function App() {
   const [solution, setSolution ] = useState(null);
@@ -23,6 +24,7 @@ function App() {
       <h1>Wordle Game</h1>
       <DarkModeToggle />
       {solution && <Wordle solution={ solution }/>}
+      <Footer />
     </div>    
   );
 }

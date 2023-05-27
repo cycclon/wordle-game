@@ -3,5 +3,6 @@ Default focus on hidden textbox when page loads - DONE
 ----------- Add message for focusing on textbox - DONE
 --------------------- Style the message - DONE
 First letter is not taken into consideration - DONE
-Reload button after game ends - PENDING
-Dark Mode - ON GOING
+Reload button after game ends - DONE
+Dark Mode - DONE
+Footer with name and donations button
