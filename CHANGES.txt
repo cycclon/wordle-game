@@ -1,0 +1,7 @@
+When a letter is yellow, in the second guess is shown grey again - DONE
+Default focus on hidden textbox when page loads - DONE
+----------- Add message for focusing on textbox - DONE
+--------------------- Style the message - DONE
+First letter is not taken into consideration - DONE
+Reload button after game ends - PENDING
+Dark Mode - ON GOING
