@@ -16,6 +16,7 @@ export default function Wordle({ solution }) {
 
     if(isCorrect) {
       // window.removeEventListener('keyup', handleKeyup);
+      
       setTimeout(()=> {
         setShowModal(true)
       },2000)
@@ -24,6 +25,7 @@ export default function Wordle({ solution }) {
 
     if(turn>5) {
       // window.removeEventListener('keyup', handleKeyup);
+      
       setTimeout(()=> {
         setShowModal(true)
       },2000)

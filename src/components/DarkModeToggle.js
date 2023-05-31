@@ -23,7 +23,7 @@ export const DarkModeToggle = () => {
   }, [isDark]); 
 
   return (
-    <div style={{position: "relative", left: "150px", top: "-50px"}}>
+    <div style={{position: "relative", left: "150px", top: "-90px"}}>
       <Toggle      
         checked={isDark}
         onChange={({ target }) => setIsDark(target.checked)}

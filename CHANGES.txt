@@ -5,4 +5,6 @@ Default focus on hidden textbox when page loads - DONE
 First letter is not taken into consideration - DONE
 Reload button after game ends - DONE
 Dark Mode - DONE
-Footer with name and donations button
+Footer with name and donations button - DONE
+Wins/Losses counter per device (App data) - PENDING
+Persist theme selection in app data - PENDING

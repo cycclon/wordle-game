@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Wordle from "./components/Wordle";
 import { DarkModeToggle } from "./components/DarkModeToggle";
 import Footer from "./components/Footer";
+import WinRate from "./components/WinRate";
 
 function App() {
   const [solution, setSolution ] = useState(null);
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <h1>Wordle Game</h1>
+      <WinRate />
       <DarkModeToggle />
       {solution && <Wordle solution={ solution }/>}
       <Footer />
