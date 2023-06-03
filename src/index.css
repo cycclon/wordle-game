@@ -115,12 +115,13 @@ h1{
 }
 
 .keypad {
-  max-width: 500px;
+  max-width: 560px;
   margin: 20px auto;
   color: black;
 }
 
 .keypad > div {
+  border: 2px solid black;
   margin: 5px;
   width: 40px;
   height: 50px;
@@ -128,12 +129,46 @@ h1{
   display: inline-block;
   border-radius: 6px;
   line-height: 50px;
+  transition: all .1s ease-out;
+}
+
+.keypad > div:hover {
+  cursor: pointer;
+  border: 2px solid limegreen;
+  width: 45px;
+  height: 55px;
+  font-size: 28px;
+  margin: 0px;
+  background-color: rgb(230, 255, 250);
+  transition: all .1s ease-in;
+}
+
+.keypad > div.backspace {
+  width: 50px;
+  background: rgb(255,200,200);
+}
+
+.keypad > div.backspace:hover {
+  border: 2px solid rgb(255,50,50);;
+  width: 55px;
+  background: rgb(255,150,150);
+}
+
+.keypad > div.enter {
+  width: 60px;
+  background: rgb(200, 255, 200);
+}
+
+.keypad > div.enter:hover {
+  width: 65px;
+  font-size: 22px;
 }
 
 .keypad > div.green {
   background: #5ac85a;
   color: #fff;
   transition: all 0.3s ease-in;
+  
 }
 
 .keypad > div.yellow {

@@ -88,30 +88,34 @@ const useWordle = (solution) => {
 
   }
 
+  const handleEnter = ()=>{
+    if(turn > 5){
+      console.log('you used all your guesses');
+      return
+    }
+    // do not allow duplicate words
+    if(history.includes(currentGuess)) {
+      console.log('you already tried that word');
+      return
+    }
+    // check word is 5 chars long
+    if(currentGuess.length !== 5){
+      console.log('word must be 5 chars long');
+      return
+    }
+    const formatted = formatGuess();
+    //console.log(formatted);
+    
+    addnewGuess(formatted);
+  }
+
   // handle keyup event  & track current guess
   // if user presses enter, add the new guess
   const handleKeyup = (e) => {
     //console.log(e.keyCode)
     if(e.key === 'Enter'){
       // only add guess if turn is less than five
-      if(turn > 5){
-        console.log('you used all your guesses');
-        return
-      }
-      // do not allow duplicate words
-      if(history.includes(currentGuess)) {
-        console.log('you already tried that word');
-        return
-      }
-      // check word is 5 chars long
-      if(currentGuess.length !== 5){
-        console.log('word must be 5 chars long');
-        return
-      }
-      const formatted = formatGuess();
-      //console.log(formatted);
-      
-      addnewGuess(formatted);
+      handleEnter()
     }
     // if(e.key === 'Backspace' || e.key === 'Delete') {
     //   setCurrentGuess((prev)=> {
@@ -124,8 +128,30 @@ const useWordle = (solution) => {
         setCurrentGuess((prev) => {
           return prev + e.key;
         })
-      }
+      }   
+      
     }
+  }
+
+  const handleKeypadClick = (key)=>{
+    switch(key){
+      case "Enter":
+        handleEnter()
+        break;
+      case "Backspace":
+        setCurrentGuess((prev)=> {
+          return prev.slice(0, -1);
+        })
+        break;
+      default:
+        if(currentGuess.length < 5){
+          setCurrentGuess((prev) => {
+            return prev + key;
+          })
+        }     
+        break;
+    }    
+    // console.log(currentGuess)    
   }
 
   const handleInput = (e) => {
@@ -138,7 +164,7 @@ const useWordle = (solution) => {
     return
   }
 
-  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup, handleInput}
+  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup, handleInput, handleKeypadClick}
 
 }
 
