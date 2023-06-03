@@ -6,5 +6,5 @@ First letter is not taken into consideration - DONE
 Reload button after game ends - DONE
 Dark Mode - DONE
 Footer with name and donations button - DONE
-Wins/Losses counter per device (App data) - PENDING
-Persist theme selection in app data - PENDING
+Wins/Losses counter per device (Local Storage) - DONE
+Persist theme selection in Local Storage - PENDING

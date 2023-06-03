@@ -5,7 +5,7 @@ import Keypad from './Keypad';
 import Modal from './Modal';
 
 export default function Wordle({ solution }) {
-  const {currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys} = useWordle(solution);
+  const {currentGuess, handleKeyup, guesses, isCorrect, turn, usedKeys, handleInput} = useWordle(solution);
   const [showModal, setShowModal] = useState(false);
   const [focused, setFocused] = useState(false)
   const textInput = useRef(null)
@@ -71,7 +71,7 @@ export default function Wordle({ solution }) {
       { focused ? '' : <label className='help'>Click below this text if you dont see a keyboard or your input does not compute</label>}
       <br />
       <input ref={textInput} className="texto" type="text" onKeyUp={handleKeyup} 
-      autoCorrect="off" autoCapitalize="off" spellCheck="false" />
+      onInput={handleInput} autoCorrect="off" autoCapitalize="off" spellCheck="false" />
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
       <Keypad usedKeys={usedKeys} />
       {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}

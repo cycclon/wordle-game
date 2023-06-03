@@ -90,8 +90,9 @@ const useWordle = (solution) => {
 
   // handle keyup event  & track current guess
   // if user presses enter, add the new guess
-  const handleKeyup = ({ key }) => {
-    if(key === 'Enter'){
+  const handleKeyup = (e) => {
+    //console.log(e.keyCode)
+    if(e.key === 'Enter'){
       // only add guess if turn is less than five
       if(turn > 5){
         console.log('you used all your guesses');
@@ -112,22 +113,32 @@ const useWordle = (solution) => {
       
       addnewGuess(formatted);
     }
-    if(key === 'Backspace') {
-      setCurrentGuess((prev)=> {
-        return prev.slice(0, -1);
-      })
-      return
-    }
-    if(/^[A-Za-z]$/.test(key)){
+    // if(e.key === 'Backspace' || e.key === 'Delete') {
+    //   setCurrentGuess((prev)=> {
+    //     return prev.slice(0, -1);
+    //   })
+    //   return
+    // }
+    if(/^[A-Za-z]$/.test(e.key)){
       if(currentGuess.length < 5){
         setCurrentGuess((prev) => {
-          return prev + key;
+          return prev + e.key;
         })
       }
     }
   }
 
-  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup}
+  const handleInput = (e) => {
+    if(e.nativeEvent.inputType === "deleteContentBackward") {
+      setCurrentGuess((prev)=> {
+        return prev.slice(0, -1);
+      })
+      return
+    }
+    return
+  }
+
+  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup, handleInput}
 
 }
 
