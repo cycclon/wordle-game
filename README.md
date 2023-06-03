@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Famous Wordle game built on React as part of a React tutorial
 
 # This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
