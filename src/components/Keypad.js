@@ -1,3 +1,4 @@
+import { BackspaceIcon } from '@heroicons/react/24/outline';
 import React, { useEffect, useState } from 'react'
 
 
@@ -30,7 +31,9 @@ export default function Keypad({ usedKeys, handleKeypadClick }) {
       <div key="Enter" className='enter'
       onClick={(e)=>{handleKeypadClick("Enter")}}>Enter</div>
       <div key="Backspace" className='backspace'
-      onClick={(e)=>{handleKeypadClick("Backspace")}}>&lt;&lt;</div>
+      onClick={(e)=>{handleKeypadClick("Backspace")}}>
+        <BackspaceIcon className='backspace-icon' viewBox='0 0 22 22' />
+      </div>
     </div>
   )
 }

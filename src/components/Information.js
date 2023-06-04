@@ -9,15 +9,21 @@ export function Options() { return InfoOptions }
 const Information = ( {options, messages} ) => {
   const [fixed, setFixed] = useState(false)
   const info = useRef()
+  const infoIcon = useRef(null)
   
   useEffect(()=>{
-    if(fixed) {info.current.className = "information visible"}
-    else {info.current.className = "information"}
+    if(fixed) {
+      info.current.className = "information visible"
+      infoIcon.current.setAttribute('class', "information-icon show")
+    }else {
+      info.current.className = "information"
+      infoIcon.current.setAttribute('class', "information-icon")
+    }
   },[fixed])
 
   return (
     <div style={{verticalAlign: "top", position: "relative"}}>
-      <InformationCircleIcon className='information-icon' viewBox='0 0 24 24' 
+      <InformationCircleIcon ref={infoIcon} className='information-icon' viewBox='0 0 24 24' 
       //title={`Click to ${fixed ? 'hide' : 'show'} information/tips`}
       // onMouseOver={(e)=>{if(info.current !== undefined){info.current.hidden = false}}} 
       // onMouseOut={(e)=>{if(info.current !== undefined){info.current.hidden = true}}}

@@ -15,8 +15,8 @@ Change react toggle background color - DONE
 Persist theme selection in Local Storage - DONE
 Order keypad acording to phone layout - DONE
 Adjuts keypad size - DONE
-Backspace/Enter icons - PENDING
+Backspace/Enter icons - DONE
 Show wording rules - DONE
 Add more words - DONE
 Add company logo on footer - PENDING
-Add link to github repo - PENDING
+Add link to github repo - DONE

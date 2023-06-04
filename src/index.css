@@ -121,6 +121,12 @@ h1{
   vertical-align: top;
   width: 24px;
   height: 24px;
+  transition: all .3s ease-out;
+}
+
+.information-icon.show {
+  color: var(--accent-color);
+  transition: all .3s ease-in;
 }
 
 ul.information {
@@ -206,13 +212,13 @@ li.information {
   transition: all .1s ease-in;
 }
 .keypad > div.backspace {
-  width: 45px;
+  width: 35px;
   background: rgb(255,200,200);
 }
 
 .keypad > div.backspace:hover {
   border: 2px solid rgb(255,50,50);;
-  width: 45px;
+  width: 40px;
   background: rgb(255,150,150);
   font-size: 20px;
 }
@@ -244,6 +250,13 @@ li.information {
   background: #a1a1a1;
   color: #fff;
   transition: all 0.3s ease-in;
+}
+
+.backspace-icon {
+  position: relative;
+  top: 7px;
+  width: 26px;
+  height: 26px;  
 }
 
 /*#endregion*/
