@@ -11,9 +11,12 @@ Fix game not taking inputs in Android devices by enabling clicking on the built 
 Add context help with game rules - DONE
 Add icon to app (favicon) instead of default react one - DONE
 Center icons on dark mode toggle - DONE
+Change react toggle background color - DONE
 Persist theme selection in Local Storage - DONE
-Change darkmode toggle background color - PENDING
 Order keypad acording to phone layout - DONE
 Adjuts keypad size - DONE
-Add more words - PENDING
+Backspace/Enter icons - PENDING
+Show wording rules - DONE
+Add more words - DONE
 Add company logo on footer - PENDING
+Add link to github repo - PENDING

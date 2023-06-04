@@ -10,6 +10,8 @@ body {
   --color-modal-background: rgba(255, 255, 255, 0.7);
   --color-link: blue;
   --color-border: #444;
+  --accent-color: limegreen;
+  --accent-color-disabled: rgba(50, 255, 100, .5);
   background: var(--color-background);
   color: var(--color-foreground);
 }
@@ -114,19 +116,18 @@ h1{
 /*#region INFORMATION*/
 .information-icon {
   padding-left: 5px;
-  color: var(--accent-color);
+  color: var(--accent-color-disabled);
   display: inline;
   vertical-align: top;
   width: 24px;
   height: 24px;
-  filter: drop-shadow(0px 0px 10px rgba(0, 250, 0, 1)); 
 }
 
 ul.information {
   opacity: 0;
   height: 0;
   display: inline-block;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
   text-align: left;
   vertical-align: top;
   /* border: 1px solid var(--border-color-light); */
@@ -325,14 +326,83 @@ li.information {
 /*#endregion*/
 
 /*#region DARKMODE TOGGLE CUSTOMIZATION*/
+
 .react-toggle-track-check {
   margin-left: -5px;
-  padding-top: 5px;
+  padding-top: 7px;
 }
+
 
 .react-toggle-track-x {
   margin-right: 5px;
   padding-top: 7px;
 }
 
+.custom-toggle.react-toggle--checked .react-toggle-track {
+  background-color: #9da89d;
+}
+
+.custom-toggle.react-toggle--checked:hover .react-toggle-track:hover {
+  background-color: #9da89d;
+}
+
+.custom-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #9da89d;
+}
+
+/*#endregion*/
+
+/*#region RULES */
+.rules-container {
+  margin: auto 0;
+  position: relative;
+  color: var(--color-foreground-light);
+  font-style: italic;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: left;
+  width: 340px;
+}
+
+.rules-icon {
+  color: var(--accent-color-disabled);
+  display: inline;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  transition: all .3s ease-out;
+}
+
+.rules-icon.show {
+  color: var(--accent-color);
+  transition: all .3s ease-in;
+}
+
+.rules-title {
+  margin-left: 5px;
+  opacity: 0;
+  display: inline;
+  line-height: 24px;
+  transition: all .3s ease-out;
+}
+
+.rules-title.show {
+  opacity: 1;
+  transition: all .3s ease-in;
+}
+
+.rules {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  display: inline;
+  transition: all .3s ease-out;
+}
+
+.rules.show {
+  opacity: 0.7;
+  width: 300px;
+  transition: all .3s ease-in;
+}
 /*#endregion*/

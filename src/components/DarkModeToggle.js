@@ -12,18 +12,18 @@ export const DarkModeToggle = () => {
       document.body.classList.remove('dark');
     }
 
-    if(isDark != undefined){localStorage.setItem('isDark', isDark)}
+    if(isDark !== undefined){localStorage.setItem('isDark', isDark)}
   }, [isDark]); 
 
   return (
     <div style={{position: "relative", left: "150px", top: "-90px"}}>
-      <Toggle      
+      <Toggle
+        className="custom-toggle"
         checked={isDark}
         onChange={({ target }) => setIsDark(target.checked)}
-        icons={{ checked: "🌙", unchecked: "🔆" }}
+        icons={{ checked: "🔆", unchecked: "🌙" }}
         aria-label="Dark mode toggle"
       />
-    </div>
-    
+    </div>    
   );
 };

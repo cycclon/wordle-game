@@ -22,8 +22,7 @@ const Information = ( {options, messages} ) => {
       // onMouseOver={(e)=>{if(info.current !== undefined){info.current.hidden = false}}} 
       // onMouseOut={(e)=>{if(info.current !== undefined){info.current.hidden = true}}}
       onClick={(e)=>setFixed(prev => !prev)}
-      onMouseOver={(e)=>{setFixed(true)}}
-      onMouseOut={(e)=>setFixed(false)}/>
+      />
         {/* hidden={options !== InfoOptions.Fixed && !fixed} */}
         <>
           <ul ref={info} className='information' >
