@@ -19,10 +19,13 @@ export default function Keypad({ usedKeys, handleKeypadClick }) {
     <div className="keypad">
       {letters && letters.map((l)=>{
         const color = usedKeys[l.key]
+
         return (
+          <>
           <div key={l.key} className={color} 
           onClick={(e)=>{handleKeypadClick(l.key)}}>{l.key}</div>
-        )
+          {l.key === 'l' && <br />}
+          </>)
       })}
       <div key="Enter" className='enter'
       onClick={(e)=>{handleKeypadClick("Enter")}}>Enter</div>

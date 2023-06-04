@@ -175,28 +175,29 @@ li.information {
 /*#region KEYPAD*/
 
 .keypad {
-  max-width: 560px;
+  max-width: 410px;
   margin: 20px auto;
   color: black;
+  justify-content: center;
 }
 
 .keypad > div {
-  border: 2px solid black;
-  margin: 5px;
-  width: 40px;
-  height: 50px;
+  border: 1px solid black;
+  margin: 3px;
+  width: 30px;
+  height: 40px;
   background: #eee;
   display: inline-block;
   border-radius: 6px;
-  line-height: 50px;
+  line-height: 40px;
   transition: all .1s ease-out;
 }
 
 .keypad > div:hover {
   cursor: pointer;
-  border: 2px solid limegreen;
-  width: 45px;
-  height: 55px;
+  border: 1px solid limegreen;
+  width: 35px;
+  height: 45px;
   font-size: 28px;
   margin: 0px;
   background-color: rgb(230, 255, 250);

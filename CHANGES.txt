@@ -12,6 +12,6 @@ Add context help with game rules - DONE
 Add icon to app (favicon) instead of default react one - DONE
 Center icons on dark mode toggle - DONE
 Persist theme selection in Local Storage - PENDING
-Order keypad acording to phone layout - PENDING
+Order keypad acording to phone layout - DONE
 Add more words - PENDING
 Add company logo on footer - PENDING
