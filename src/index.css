@@ -143,6 +143,64 @@ h1{
   transition: all .1s ease-in;
 }
 
+.information-icon {
+  padding-left: 5px;
+  color: var(--accent-color);
+  display: inline;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 250, 0, 1)); 
+}
+
+ul.information {
+  opacity: 0;
+  height: 0;
+  display: inline-block;
+  color: var(--accent-color);
+  text-align: left;
+  vertical-align: top;
+  /* border: 1px solid var(--border-color-light); */
+  background-color: rgba(0, 37, 0, 0.75);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 3px;
+  padding-left: 25px;
+  max-width: 300px;
+  font-style: italic;
+  padding: inherit;
+  margin-top: 10px;
+  margin-left: 20px;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+  /* transition: height 0.5s; */
+  
+}
+
+ul.information:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 0;
+  height: 0;  
+  border-right: 15px solid rgba(0, 37, 0, 0.75);
+  border-bottom: 15px solid transparent; 
+}
+
+ul.visible {
+  color: #ddd;
+  opacity: 1;
+  height: auto;
+} 
+
+li.information {
+  font-size: 12px;
+  margin: 8px 30px;
+}
+
 .keypad > div.backspace {
   width: 50px;
   background: rgb(255,200,200);

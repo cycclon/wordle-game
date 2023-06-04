@@ -7,4 +7,8 @@ Reload button after game ends - DONE
 Dark Mode - DONE
 Footer with name and donations button - DONE
 Wins/Losses counter per device (Local Storage) - DONE
+Fix game not taking inputs in Android devices by enabling clicking on the built in keypad - DONE
+Add context help with game rules - DONE
 Persist theme selection in Local Storage - PENDING
+Order keypad acording to phone layout - PENDING
+Add more words - PENDING
