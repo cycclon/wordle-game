@@ -14,6 +14,10 @@ export const DarkModeToggle = () => {
     (isSystemDark) => setIsDark(isSystemDark)
   );
 
+  useEffect(()=>{
+    console.log(systemPrefersDark)
+  },[])
+
   useEffect(() => {
     if (isDark) {
       document.body.classList.add('dark');
