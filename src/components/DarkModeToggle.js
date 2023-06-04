@@ -3,7 +3,7 @@ import Toggle from "react-toggle";
 import "react-toggle/style.css";
 
 export const DarkModeToggle = () => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(localStorage.getItem('isDark')==='true');
 
   useEffect(() => {
     if (isDark) {
@@ -11,6 +11,8 @@ export const DarkModeToggle = () => {
     } else {
       document.body.classList.remove('dark');
     }
+
+    if(isDark != undefined){localStorage.setItem('isDark', isDark)}
   }, [isDark]); 
 
   return (
