@@ -7,7 +7,7 @@
 3. Once you complete a line of letters press "Enter" key to check against the secret word
 4. Depending whether each letter matches the letters in the secret word, you'll see three different colors:
     - Grey: the letter is not in the secret word
-    - <span style="color:red">Yellow</span>: the letter is in the secret word but in a different possition
+    - <span style="color: #ecf015">Yellow</span>: the letter is in the secret word but in a different possition
     - Green: the letter is in the secret word and in the correct possition
 5. The keypad will be highlighted with these colors accorgingly
 
