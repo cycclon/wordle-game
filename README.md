@@ -13,6 +13,7 @@
 
 
 ![wordle example](https://github.com/cycclon/wordle-game/assets/128182853/26b09d10-4c48-4170-861d-6fce6cf64833)
+
 *In this example (secret word "BRISA") the letters "N" and "J" are not present in the secret word; the letter "I" is present but in a different position; finally, the letter "A" is in the correct possition*
 
 You win if you guess the secret word in 6 tries or less
