@@ -17,3 +17,7 @@
 *In this example (secret word "BRISA") the letters "N" and "J" are not present in the secret word; the letter "I" is present but in a different position; finally, the letter "A" is in the correct possition*
 
 You win if you guess the secret word in 6 tries or less
+
+### Tutorial used
+The Net Ninja Channel: Make a Wordle Clone with React
+https://youtube.com/playlist?list=PL4cUxeGkcC9gXdVXVJBmHpSI7zCEcjLUX
