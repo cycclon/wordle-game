@@ -1,4 +1,4 @@
-** Famous Wordle game ** 
+**Famous Wordle game** 
 Built on React as part of a React tutorial
 ---
 Hosted on Glitch: https://mywordle.glitch.me
