@@ -1,6 +1,8 @@
 # Famous Wordle game 
 ## Built on React as part of a React tutorial
 ---
+Hosted on Glitch: https://mywordle.glitch.me
+
 ### Intructions
 1. The objective of the game is to guess a secret random word in 6 guesses or less, using a color scheme as hints for each letter
 2. Touch (mobile) or click (pc) on the letters in the keypad to add them to the board
