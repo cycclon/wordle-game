@@ -183,11 +183,12 @@ li.information {
 
 .keypad > div {
   border: 1px solid black;
-  margin: 3px;
-  width: 30px;
-  height: 40px;
+  margin: 2px;
+  margin-top: 5px;
+  width: 32px;
+  height: 42px;
   background: #eee;
-  display: inline-block;
+  display: inline-block;    
   border-radius: 6px;
   line-height: 40px;
   transition: all .1s ease-out;
@@ -198,20 +199,21 @@ li.information {
   border: 1px solid limegreen;
   width: 35px;
   height: 45px;
-  font-size: 28px;
+  font-size: 26px;
   margin: 0px;
   background-color: rgb(230, 255, 250);
   transition: all .1s ease-in;
 }
 .keypad > div.backspace {
-  width: 50px;
+  width: 45px;
   background: rgb(255,200,200);
 }
 
 .keypad > div.backspace:hover {
   border: 2px solid rgb(255,50,50);;
-  width: 55px;
+  width: 45px;
   background: rgb(255,150,150);
+  font-size: 20px;
 }
 
 .keypad > div.enter {
@@ -221,7 +223,7 @@ li.information {
 
 .keypad > div.enter:hover {
   width: 65px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .keypad > div.green {
