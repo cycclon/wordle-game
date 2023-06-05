@@ -23,7 +23,7 @@ const WinRate = () => {
   return (
     <div style={{fontSize: "12px"}}>
       <label style={{color: "olive", fontWeight: "bold"}}>{getWins()}</label> wins and <label style={{color: "coral", fontWeight: "bold"}}>{getLosses()}</label> losses on this device.
-      {(getWins()>0 || getLosses() > 0) && <><br /><label style={{color: "green", fontWeight: "bold", fontSize: "14px"}}>{getWins()/(getWins()+getLosses())*100}%</label> Win Rate</>}
+      {(getWins()>0 || getLosses() > 0) && <><br /><label style={{color: "green", fontWeight: "bold", fontSize: "14px"}}>{Math.round(getWins()/(getWins()+getLosses())*100)}%</label> Win Rate</>}
     </div>
   )
 }

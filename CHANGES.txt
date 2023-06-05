@@ -20,3 +20,4 @@ Show wording rules - DONE
 Add more words - DONE
 Add company logo on footer - PENDING
 Add link to github repo - DONE
+Add rounding on win rate - ON GOING
