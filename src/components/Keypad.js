@@ -12,6 +12,11 @@ export default function Keypad({ usedKeys, handleKeypadClick }) {
     fetch(`${API_URL}/letters`)
     .then(res => res.json())
     .then(json=>{
+      json.sort((a,b)=>{
+        if(a._id > b._id) return 1
+        if(a._id < b._id) return -1
+        return 0
+      })
       setLetters(json)
     })
   }, []) 
@@ -27,13 +32,13 @@ export default function Keypad({ usedKeys, handleKeypadClick }) {
           onClick={(e)=>{handleKeypadClick(l.key)}}>{l.key}</div>
           {l.key === 'l' && <br />}
           </>)
-      })}
-      <div key="Enter" className='enter'
-      onClick={(e)=>{handleKeypadClick("Enter")}}>Enter</div>
+      })}      
       <div key="Backspace" className='backspace'
       onClick={(e)=>{handleKeypadClick("Backspace")}}>
         <BackspaceIcon className='backspace-icon' viewBox='0 0 22 22' />
       </div>
+      <div key="Enter" className='enter'
+      onClick={(e)=>{handleKeypadClick("Enter")}}>Enter</div>
     </div>
   )
 }
